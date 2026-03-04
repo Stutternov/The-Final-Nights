@@ -193,7 +193,7 @@
 	if(roll == ROLL_SUCCESS)
 		successful = TRUE
 		//Gives you 60 damage resistence if you have 0, if you have other forms of resistence (i.e amulet) it caps at 75
-		owner.physiology.damage_resistance = = min(75, owner.physiology.damage_resistance + 60)
+		owner.physiology.damage_resistance = min(75, owner.physiology.damage_resistance + 60)
 		animate(owner, color = "#000000", time = 1 SECONDS, loop = 1)
 		to_chat(owner, span_green("You successfully fuse with the shadows!"))
 	else if(roll == ROLL_FAILURE)
