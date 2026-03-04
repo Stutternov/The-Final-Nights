@@ -14,7 +14,7 @@
 /datum/discipline/visceratika/post_gain()
 	. = ..()
 	if(level >= 4)
-		owner.dna?.species.brutemod = 0.9 // Netresult 0.4 Brute when hit by non-sharp weapon, 10% reduction
+		owner.dna?.species.brutemod *= 0.8 // Netresult 0.4 Brute
 		owner.dna?.species.burnmod *= 0.5 // Net result 1 Burn
 		owner.physiology.clone_mod *= 0.9 // Net result 0.9 Clone
 		ADD_TRAIT(owner, TRAIT_IGNOREDAMAGESLOWDOWN, TRAIT_GENERIC)
