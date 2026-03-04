@@ -128,7 +128,7 @@
 
 /datum/discipline_power/fortitude/four/activate()
 	. = ..()
-	owner.physiology.damage_resistance = min(70, (owner.physiology.damage_resistance+fortitude_DR) )
+	owner.physiology.damage_resistance = min(60, (owner.physiology.damage_resistance+fortitude_DR) )
 
 /datum/discipline_power/fortitude/four/deactivate()
 	. = ..()
@@ -158,7 +158,7 @@
 
 /datum/discipline_power/fortitude/five/activate()
 	. = ..()
-	owner.physiology.damage_resistance = min(70, (owner.physiology.damage_resistance+fortitude_DR) )
+	owner.physiology.damage_resistance = min(60, (owner.physiology.damage_resistance+fortitude_DR) )
 
 /datum/discipline_power/fortitude/five/deactivate()
 	. = ..()
