@@ -383,7 +383,7 @@
 	//If under 40, it will increase it up 20 a max of 40.
 	if(H.physiology.damage_resistance < 40)
 		var/new_damage_resistence = min(40, H.physiology.damage_resistance + 20)
-		var/actual_damage_resistence_change = new_damage_resistence - H.physiology.damage_resistence
+		var/actual_damage_resistence_change = new_damage_resistence - H.physiology.damage_resistance
 		H.physiology.damage_resistance = new_damage_resistence
 		to_chat(owner, span_notice("Your damage resistance increases by [actual_damage_resistence_change] (you own [get_owned_amount()] keys of alamut)"))
 
@@ -393,9 +393,9 @@
 	if(H.physiology)
 		// Restore damage values, capped at reasonable maximums
 		var/new_damage_resistence = max(0, H.physiology.damage_resistance - 20)
-		var/actual_damage_resistence = H.physiology.damage_resistance - new_damage_resistence
+		var/actual_damage_resistence_change = new_damage_resistence - H.physiology.damage_resistance
 		H.physiology.damage_resistance = new_damage_resistence
-		to_chat(owner, span_notice("Your damage resistance decreases by [actual_damage_resistence] (you own [get_owned_amount()] keys of alamut)"))
+		to_chat(owner, span_notice("Your damage resistance decreases by [actual_damage_resistence_change] (you own [get_owned_amount() - 1] keys of alamut)"))
 
 // ---------------------------------------------ODIOUS CHALICE-----------------------------------------------------------
 /obj/item/vtm_artifact/odious_chalice
